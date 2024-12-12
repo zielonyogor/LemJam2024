@@ -9,15 +9,23 @@ public class timer : MonoBehaviour
     [SerializeField] private float durationOfGame = 120;
     [SerializeField] private TextMeshProUGUI text;
 
-    void SetText()
+    public static UnityEvent Timeout = new UnityEvent(); 
+
+    void Start()
     {
-        text.text = "Time Left: " + durationOfGame.ToString();
+        StartCoroutine(TimeStep());
     }
 
     IEnumerator TimeStep()
     {
-        durationOfGame-=1;
-        yield return new WaitForSeconds(1);
+        Debug.Log("Time Step");
+        while(durationOfGame>0)
+        {
+            durationOfGame-=1;
+            text.text = "Time Left: " + durationOfGame.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        Timeout.Invoke();
         //Debug.Log("current time stamp : " + time_stamp);
     }
 }

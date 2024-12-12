@@ -11,7 +11,7 @@ public class GridManager : MonoBehaviour
 
     public Building[,,] gridMatrix = new Building[2, 3, 3];
 
-    private GridLayout gridLayout;
+    [SerializeField] private GridLayout gridLayout;
     private float gap;
 
     private void Awake()
