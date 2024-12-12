@@ -1,16 +1,27 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum State
+{
+    Basic,
+    TargetOpponent,
+    TargetYourself
+}
+
 public class PlayerInput : MonoBehaviour
 {
     public int id = 1;
 
-    private Vector2Int currentIndex = new Vector2Int(0, 0);
+    private Vector3Int currentIndex;
+    private State currentState;
 
     private void Start()
     {
-        Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex, id);
+        currentIndex = new Vector3Int(0, 0, id);
+        Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
+
+        currentState = State.Basic;
     }
 
     public void OnPlayerMove(InputAction.CallbackContext context)
@@ -19,7 +30,7 @@ public class PlayerInput : MonoBehaviour
 
         Vector2 moveVector = context.ReadValue<Vector2>();
 
-        currentIndex += new Vector2Int((int)moveVector.x, (int)moveVector.y);
+        currentIndex += new Vector3Int((int)moveVector.x, (int)moveVector.y, 0);
 
         if (currentIndex.x >= 3) { currentIndex.x = 2; }
         if (currentIndex.x < 0) currentIndex.x = 0;
@@ -28,7 +39,7 @@ public class PlayerInput : MonoBehaviour
 
         Debug.Log("Current player Local Position: " + currentIndex);
 
-        Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex, id);
+        Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
 
         // if (id == 1)
@@ -47,4 +58,12 @@ public class PlayerInput : MonoBehaviour
         GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
     }
 
+    public void ChangeState(State newState)
+    {
+        currentState = newState;
+        if (newState == State.TargetOpponent)
+        {
+            currentIndex.z = id == 1 ? 2 : 1;
+        }
+    }
 }
