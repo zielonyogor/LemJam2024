@@ -52,10 +52,10 @@ public class GridManager : MonoBehaviour
         gridMatrix[position.z, position.x, position.y] = newBuilding;
     }
 
-    public Vector2 GetGridPosition(Vector2Int position, int playerId)
+    public Vector2 GetGridPosition(Vector3Int position)
     {
         int posX, posY;
-        if (playerId == 1)
+        if (position.z == 1)
         {
             posX = position.x + player1GridStartIndex.x;
             posY = position.y + player1GridStartIndex.y;
