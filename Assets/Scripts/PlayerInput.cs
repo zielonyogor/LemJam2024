@@ -43,7 +43,8 @@ public class PlayerInput : MonoBehaviour
 
     public void OnAccept(InputAction.CallbackContext context)
     {
-        GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, 1));
+        if (!context.performed) return;
+        GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
     }
 
 }

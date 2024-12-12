@@ -47,7 +47,9 @@ public class GridManager : MonoBehaviour
             posY = position.y + player2GridStartIndex.y;
         }
         Vector3 newCellPos = gridLayout.CellToWorld(new Vector3Int(posX, posY, 0));
+        newCellPos.y -= gap;
         Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
+        gridMatrix[position.z, position.x, position.y] = newBuilding;
     }
 
     public Vector2 GetGridPosition(Vector2Int position, int playerId)
