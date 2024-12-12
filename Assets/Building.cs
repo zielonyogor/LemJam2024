@@ -3,16 +3,22 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 
+
+
 public class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain = 0;
     [SerializeField] private int happinessGain = 0;
-    private uint owner;
+        uint owner;
 
 
 
     public List<HistoryEntry> history = new List<HistoryEntry>();
 
+    private void Start()
+    {
+        TimeManager.instance.TimeProgressed.AddListener(ProgressTime);
+    }
 
     void ProgressTime()
     {
@@ -24,6 +30,16 @@ public class Building : MonoBehaviour
     public void Test()
     {
         Debug.Log("test building spawning");
+    }
+
+
+    public void TerroristAttack(int litme_reversed)
+    {
+
+        uint currentTimeStamp = TimeManager.instance.time_stamp;
+
+
+
     }
 }
 
