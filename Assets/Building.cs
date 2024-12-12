@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 
-public abstract class Building : MonoBehaviour
+public  class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain =0;
     [SerializeField] private int happynesGain =0;
