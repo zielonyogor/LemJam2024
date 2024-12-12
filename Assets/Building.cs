@@ -1,26 +1,29 @@
 using NUnit.Framework;
 using System;
 using UnityEngine;
-
 using System.Collections.Generic;
-using UnityEngine.UIElements;
 
-public abstract class Building : MonoBehaviour
+public class Building : MonoBehaviour
 {
-    [SerializeField] private int moneyGain =0;
-    [SerializeField] private int happynesGain =0;
-    private uint ovner;
+    [SerializeField] private int moneyGain = 0;
+    [SerializeField] private int happinessGain = 0;
+    private uint owner;
 
 
 
     public List<HistoryEntry> history = new List<HistoryEntry>();
-    
 
-    void progress_time()
+
+    void ProgressTime()
     {
-        if(moneyGain != 0 || happynesGain != 0)
-            history.Add(new HistoryEntry(moneyGain, happynesGain,ovner));
+        if (moneyGain != 0 || happinessGain != 0)
+            history.Add(new HistoryEntry(moneyGain, happinessGain, owner));
 
+    }
+
+    public void Test()
+    {
+        Debug.Log("test building spawning");
     }
 }
 
@@ -31,13 +34,13 @@ public struct HistoryEntry
     public int gold_gain;
     public uint player;
 
-    public HistoryEntry(int gold, int happiness,uint player)
+    public HistoryEntry(int gold, int happiness, uint player)
     {
-            time_stamp = TimeManager.instance.time_stamp;
-            happiness_gain = happiness;
-            gold_gain = gold;
-            this.player = player;
-            ResourceManager.instance.AddResources(this);
+        time_stamp = TimeManager.instance.time_stamp;
+        happiness_gain = happiness;
+        gold_gain = gold;
+        this.player = player;
+        ResourceManager.instance.AddResources(this);
 
     }
 
