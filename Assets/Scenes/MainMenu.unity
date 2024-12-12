@@ -2638,9 +2638,9 @@ MonoBehaviour:
 
     Arrows - Moving
 
-    . - Select/Accept
+    < - Select/Accept
 
-    , - Cancel
+    > - Cancel
 
 '
   m_isRightToLeft: 0
