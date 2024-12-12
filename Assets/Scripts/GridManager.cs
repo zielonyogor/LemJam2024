@@ -71,5 +71,11 @@ public class GridManager : MonoBehaviour
         Vector2 returnVector = new Vector2(newCellPos.x, newCellPos.y - gap);
         Debug.Log(returnVector);
         return returnVector;
+
+
+
     }
+
+
+
 }
