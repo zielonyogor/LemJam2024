@@ -1,18 +1,31 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+using TMPro;
+
 
 public class timer : MonoBehaviour
 {
     [SerializeField] private float durationOfGame = 120;
+    [SerializeField] private TextMeshProUGUI text;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static UnityEvent Timeout = new UnityEvent(); 
+
     void Start()
     {
-        
+        StartCoroutine(TimeStep());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TimeStep()
     {
-        
+        Debug.Log("Time Step");
+        while(durationOfGame>0)
+        {
+            durationOfGame-=1;
+            text.text = "Time Left: " + durationOfGame.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        Timeout.Invoke();
+        //Debug.Log("current time stamp : " + time_stamp);
     }
 }
