@@ -11,7 +11,6 @@ public enum State
 public class PlayerInput : MonoBehaviour
 {
     public int id = 1;
-
     private Vector3Int currentIndex;
     private State currentState;
 
