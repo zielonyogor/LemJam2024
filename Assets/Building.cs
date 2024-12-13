@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
 using System.Linq;
+using Unity.VisualScripting;
 
 
 [System.Serializable]
@@ -12,7 +13,10 @@ public class Building : MonoBehaviour
     [SerializeField] private int moneyGain = 1;
     [SerializeField] private int happinessGain = 1;
     [SerializeField] private int happinesCostOnBuild = 50;
-    [SerializeField] private int goldCostOnBuild =701;
+    [SerializeField] private int goldCostOnBuild = 701;
+
+    [SerializeField] private String description = "";
+    [SerializeField] private String nameText = "";
 
     public uint owner = 0;
 
@@ -22,16 +26,16 @@ public class Building : MonoBehaviour
 
     public virtual void Start()
     {
-        
+
         TimeManager.instance.TimeProgressed.AddListener(ProgressTime);
         history.Add(new BuildHistoryEntry(goldCostOnBuild, happinesCostOnBuild, owner, this));
-        
-        
+
+
     }
 
     void ProgressTime()
     {
-        
+
         if (moneyGain != 0 || happinessGain != 0)
             history.Add(new HistoryEntry(moneyGain, happinessGain, owner));
 
@@ -56,17 +60,19 @@ public class Building : MonoBehaviour
         {
             item.Revert();
             history.Remove(item);
-            
+
         }
-
-        
-
     }
 
 
     public virtual void Select(Vector3Int position)
     {
         Debug.Log("co do sigmy");
+    }
+
+    public virtual String GetDescription()
+    {
+        return description;
     }
 }
 
@@ -94,7 +100,7 @@ public class HistoryEntry
 
     }
 
-   
+
 
 
 
@@ -121,7 +127,7 @@ public class BuildHistoryEntry : HistoryEntry
             GameObject.Destroy(b.gameObject);
             Revert();
         }
-        
+
 
 
 
@@ -131,9 +137,9 @@ public class BuildHistoryEntry : HistoryEntry
     {
         base.Revert();
 
-        if (b != null) 
+        if (b != null)
             GameObject.Destroy(b.gameObject);
-        
+
     }
 
 

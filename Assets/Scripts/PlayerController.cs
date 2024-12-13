@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public enum State
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     private Vector3Int currentIndex;
     private State currentState;
+
+    public static UnityEvent<Vector3Int> OnPlayerPositionChanged = new UnityEvent<Vector3Int>();
 
     private void Start()
     {
@@ -59,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
         Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
+
+        OnPlayerPositionChanged.Invoke(currentIndex);
 
         // if (id == 1)
         // {
