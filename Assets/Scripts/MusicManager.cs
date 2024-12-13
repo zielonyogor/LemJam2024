@@ -27,13 +27,8 @@ public class MusicManager : MonoBehaviour
 
     private bool loaded = false;
 
-    /*void Awake()
+    void Awake()
     {
-        if(!DontDestroy)
-        {
-            return;
-        }
-
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -41,10 +36,8 @@ public class MusicManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this);
         }
-        
-    }*/
+    }
 
     void Start()
     {
