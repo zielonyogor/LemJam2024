@@ -21,35 +21,44 @@ public class BuildingProxy : Building
     }
 
 
-    public override void Select(Vector3Int position)
+    public override void Select(Vector3Int position, uint id)
     {
 
 
 
+        Tool stupidTool = GridManager.Instance.goofyAssTools[id];
         if (building != null)
         {
-            Tool stupidTool = GridManager.Instance.goofyAssTools[position.z];
+
+
             if (stupidTool != null)
             {
                 Debug.Log("using tool");
                 stupidTool.UseTool(building);
 
+                if (stupidTool.targetEnemy)
+                    PlayerStateManager.Instance.ChangeStateOfPlayer(id, State.Basic);
+                GridManager.Instance.goofyAssTools[id] = null;
+
             }
             else
-                building.Select(position);
+                building.Select(position, id);
         }
-        else
+        else if (stupidTool == null)
         {
-            building = Instantiate(GridManager.Instance.goofyAssData[position.z]);
-            Vector2 newPos = GridManager.Instance.GetGridPosition(position);
-            building.transform.position = newPos;
-            Instantiate(Globals.Instance.placeBuildingParticle, building.transform.GetChild(0));
+            {
+                building = Instantiate(GridManager.Instance.goofyAssData[position.z]);
+                Vector2 newPos = GridManager.Instance.GetGridPosition(position);
+                building.transform.position = newPos;
+                Instantiate(Globals.Instance.placeBuildingParticle, building.transform.GetChild(0));
 
-            index++;
-            building.owner = (uint)position.z;
+                index++;
+                building.owner = id;
+
+            }
+
 
         }
-
     }
 
     public override void Cancel(Vector3Int position)

@@ -54,7 +54,7 @@ public class GridManager : MonoBehaviour
 
     }
 
-    public void SpawnBuildingAtPosition(Vector3Int position)
+    public void SpawnBuildingAtPosition(Vector3Int position,uint id)
     {
         int posX, posY;
         if (position.z == 0) // which player - Z
@@ -73,7 +73,7 @@ public class GridManager : MonoBehaviour
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
         Debug.Log(position);
         goofyAssData[position.z] = buildingPlacement[3 * position.x - position.y];
-        gridMatrix[position.z, position.x, -position.y].Select(position);
+        gridMatrix[position.z, position.x, -position.y].Select(position, id);
 
     }
 
@@ -87,8 +87,8 @@ public class GridManager : MonoBehaviour
 
     public void SendTerroristAttack(Vector3Int position)
     {
-        Debug.Log(position);
-        goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
+        //Debug.Log(position);
+       // goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
     }
 
     public Building GetBuildingInfo(Vector3Int position)
@@ -98,6 +98,7 @@ public class GridManager : MonoBehaviour
 
     public Vector2 GetGridPosition(Vector3Int position)
     {
+        
         int posX, posY;
         if (position.z == 0)
         {
@@ -114,6 +115,7 @@ public class GridManager : MonoBehaviour
 
         Vector2 returnVector = new Vector2(newCellPos.x, newCellPos.y - gap);
 
+        
         return returnVector;
 
     }

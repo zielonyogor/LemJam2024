@@ -1,3 +1,6 @@
+
+using System.Runtime.CompilerServices;
+
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -13,6 +16,16 @@ public class MusicManager : MonoBehaviour
     public AudioClip musicMenu;
     public AudioClip musicGame;
 
+
+    private void Start()
+    {
+        musicSource.clip = musicMenu;
+        musicSource.Play();
+    }
+}
+
+
     
 
-}
+
+
