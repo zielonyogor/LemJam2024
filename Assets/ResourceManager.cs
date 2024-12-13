@@ -33,18 +33,18 @@ public class ResourceManager : MonoBehaviour
     }
     public void AddResources(HistoryEntry entry)
     {
-        Debug.Log("AMOGUS 1");
+       
         happiness[entry.player] += entry.happiness_gain;
         gold[entry.player] += entry.gold_gain;
-        CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player));
+        CountChange.Invoke(new CounterValues(gold[entry.player],happiness[entry.player],entry.player,entry.happiness_gain));
     }
 
     public void SubtractResources(HistoryEntry entry)
     {
-        Debug.Log("AMOGUS 2");
+        
         happiness[entry.player] -= entry.happiness_gain;
         gold[entry.player] -= entry.gold_gain;
-        CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player));
+        CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player,entry.happiness_gain));
     }
 
     public int GetPlayerWin()
