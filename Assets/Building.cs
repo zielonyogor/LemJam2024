@@ -33,7 +33,7 @@ public class Building : MonoBehaviour
 
     }
 
-    void ProgressTime()
+    protected virtual void ProgressTime()
     {
 
         if (moneyGain != 0 || happinessGain != 0)
