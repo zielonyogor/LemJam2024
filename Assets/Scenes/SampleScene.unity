@@ -1105,8 +1105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0801a10baf6a1b447a2263353b4e75cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1GridStartIndex: {x: -5, y: 3}
-  player2GridStartIndex: {x: 2, y: 0}
+  player1GridStartIndex: {x: -4, y: 1}
+  player2GridStartIndex: {x: 1, y: 1}
   goofyAssData:
   - {fileID: 0}
   - {fileID: 0}
