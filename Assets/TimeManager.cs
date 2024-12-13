@@ -6,10 +6,10 @@ public class TimeManager : MonoBehaviour
 {
     
     public static TimeManager instance;
-    public uint time_stamp =0;
+    public uint time_stamp = 0;
    
 
-    public UnityEvent TimeProgressed= new UnityEvent(); 
+    public UnityEvent TimeProgressed = new UnityEvent(); 
     
     void Start()
     {

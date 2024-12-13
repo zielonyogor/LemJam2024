@@ -9,7 +9,7 @@ public class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain = 0;
     [SerializeField] private int happinessGain = 0;
-        uint owner;
+        uint owner = 0;
 
 
 
