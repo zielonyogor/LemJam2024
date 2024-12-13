@@ -10,8 +10,8 @@ using Unity.VisualScripting;
 [System.Serializable]
 public class Building : MonoBehaviour
 {
-    [SerializeField] private int moneyGain = 1;
-    [SerializeField] private int happinessGain = 1;
+    [SerializeField] protected int moneyGain = 1;
+    [SerializeField] protected int happinessGain = 1;
     [SerializeField] private int happinesCostOnBuild = 50;
     [SerializeField] private int goldCostOnBuild = 701;
 
