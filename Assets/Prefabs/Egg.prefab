@@ -93,13 +93,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecba16bea2315d408abbd08a24223eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyGain: 1
+  moneyGain: 0
   happinessGain: 1
-  happinesCostOnBuild: 50
-  goldCostOnBuild: 701
-  description: 
-  nameText: 
+  happinesCostOnBuild: 10
+  goldCostOnBuild: 20
+  description: Generates more happinness in long time.
+  nameText: Oil fanclub
   owner: 0
+  Cooldown: 3
+  happynesGainPerActivation: 1
+  goldGainPerActivation: 0
 --- !u!1 &7974740215296368633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3799426083064799710, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
