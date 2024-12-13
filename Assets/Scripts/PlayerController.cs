@@ -8,9 +8,11 @@ public enum State
     TargetYourself
 }
 
-public class PlayerInput : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public int id = 1;
+
+    PlayerInput playerInput;
     private Vector3Int currentIndex;
     private State currentState;
 
@@ -21,6 +23,21 @@ public class PlayerInput : MonoBehaviour
         transform.position = newPosition;
 
         currentState = State.Basic;
+
+        playerInput = GetComponent<PlayerInput>();
+
+        timer.Timeout.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Standby");
+        });
+        MenuPause.PauseOn.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Standby");
+        });
+        MenuPause.PauseOff.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Player_" + (id + 1));
+        });
     }
 
     public void OnPlayerMove(InputAction.CallbackContext context)
@@ -66,11 +83,11 @@ public class PlayerInput : MonoBehaviour
         currentState = newState;
         if (newState == State.TargetOpponent)
         {
-            currentIndex.z = id == 1 ? 2 : 1;
+            currentIndex.z = id == 0 ? 1 : 0;
         }
         else
         {
-            currentIndex.z = id == 1 ? 1 : 2;
+            currentIndex.z = id == 0 ? 0 : 1;
         }
     }
 }

@@ -6,6 +6,8 @@ public class BuildingProxy : Building
     Building building = null;
 
     static int index =0;
+
+    //[SerializeField] GameObject buildPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,23 +21,19 @@ public class BuildingProxy : Building
     }
 
 
-    public override void  Select()
+    public override void  Select(Vector3Int position)
     {
-        Debug.Log("building proxy is selected");
         if (building != null)
         {
-            building.Select();
+            building.Select(position);
         }
         else
         {
-            if(index %2 == 0)
-            {
-                building = new GameObject("AAAA").AddComponent<Building>();
-            }
-            else
-            {
-                building = new GameObject("BBBB").AddComponent<BombFactory>();
-            }
+            building = Instantiate(GridManager.Instance.goofyAssData[position.z]);
+            building.transform.position = GridManager.Instance.GetGridPosition(position);
+
+            index++;
+            building.owner = (uint)position.z;
 
         }
 

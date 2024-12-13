@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI[] moneyText = new TextMeshProUGUI[2];
     public TextMeshProUGUI[] happinessText = new TextMeshProUGUI[2];
-   
+
 
     private void Start()
     {
@@ -17,9 +17,7 @@ public class UIManager : MonoBehaviour
     {
         moneyText[vals.player].text = vals.gold.ToString();
         happinessText[vals.player].text = vals.happiness.ToString();
-        Debug.Log("COUNT CHANGE!");
-
-    }   
+    }
 }
 
 public struct CounterValues
@@ -28,7 +26,7 @@ public struct CounterValues
     public int happiness;
     public uint player;
 
-    public CounterValues(int gold, int happiness, uint player) 
+    public CounterValues(int gold, int happiness, uint player)
     {
         this.gold = gold;
         this.happiness = happiness;

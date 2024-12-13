@@ -470,7 +470,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1929162623}
-  - {fileID: 6891868077482636865}
+  - {fileID: 734160169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1250,6 +1250,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &734160169 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6273035948361660066, guid: d3f75ffb13e039c40bb5a39e0ca25076, type: 3}
+  m_PrefabInstance: {fileID: 2127328776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &734160170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3577500541878977641, guid: d3f75ffb13e039c40bb5a39e0ca25076, type: 3}
+  m_PrefabInstance: {fileID: 2127328776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ae1c3ccef90e94ca7f3caf3d8d21b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &801801970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1412,7 @@ MonoBehaviour:
     m_ActionName: 'Player_2/Accept[/Keyboard/period]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6891868077482636866}
+      - m_Target: {fileID: 734160170}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 0
@@ -1491,6 +1507,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1GridStartIndex: {x: -5, y: 3}
   player2GridStartIndex: {x: 2, y: 0}
+  goofyAssData:
+  - {fileID: 0}
+  - {fileID: 0}
+  buildingPlacement:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   buildingPrefab: {fileID: 8249725249528867616, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
   gridLayout: {fileID: 1008027048}
 --- !u!1 &1277405557
@@ -1670,7 +1699,7 @@ PrefabInstance:
     - target: {fileID: 1856067956684740440, guid: 2b765dc17331ff94f95b22ebde778c06, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 6891868077482636866}
+      objectReference: {fileID: 0}
     - target: {fileID: 4489478398039293239, guid: 2b765dc17331ff94f95b22ebde778c06, type: 3}
       propertyPath: m_Name
       value: Timer

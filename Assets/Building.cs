@@ -4,12 +4,12 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-
+[System.Serializable]
 public class Building : MonoBehaviour
 {
-    [SerializeField] private int moneyGain = 0;
-    [SerializeField] private int happinessGain = 0;
-        uint owner = 0;
+    [SerializeField] private int moneyGain = 1;
+    [SerializeField] private int happinessGain = 1;
+    public uint owner = 0;
 
 
 
@@ -22,6 +22,7 @@ public class Building : MonoBehaviour
 
     void ProgressTime()
     {
+        
         if (moneyGain != 0 || happinessGain != 0)
             history.Add(new HistoryEntry(moneyGain, happinessGain, owner));
 
@@ -44,7 +45,7 @@ public class Building : MonoBehaviour
     }
 
 
-    public virtual void Select()
+    public virtual void Select(Vector3Int position)
     {
         Debug.Log("co do sigmy");
     }
