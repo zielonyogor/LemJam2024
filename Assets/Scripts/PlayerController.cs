@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
         {
             playerInput.SwitchCurrentActionMap("Player_" + (id + 1));
         });
+
+        GetComponent<Animator>().SetInteger("id", id);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext context)
