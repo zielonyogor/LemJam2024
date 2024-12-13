@@ -60,4 +60,13 @@ public class BuildingProxy : Building
 
         }
     }
+
+    public override void Cancel(Vector3Int position, int id)
+    {
+        Tool stupidTool = GridManager.Instance.goofyAssTools[id];
+        if (stupidTool != null)
+        {
+            GridManager.Instance.goofyAssTools[id] = null;
+        }
+    }
 }

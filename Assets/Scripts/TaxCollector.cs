@@ -19,4 +19,20 @@ public class TaxCollector : Building
 
     }
 
+    public override void Cancel(Vector3Int position, int id)
+    {
+        {
+            power--;
+            power = Mathf.Clamp(power, 1, 9);
+
+            happinessGain = hapynesFromPower[power];
+            moneyGain = goldFromPower[power];
+            Debug.Log("new production of tax collector: " +happinessGain + " / "+ moneyGain);
+
+        }
+    }
+
+
+
+
 }

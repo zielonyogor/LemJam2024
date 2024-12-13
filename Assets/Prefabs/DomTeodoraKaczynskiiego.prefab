@@ -9,16 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 554189401860220216, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 686465782796196562, guid: 500d35e5624f92d48bf31edf6ee92d15, type: 3}
+    - target: {fileID: 554189401860220216, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_Color.b
-      value: 0.6981132
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554189401860220216, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_Color.g
-      value: 0.5422451
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554189401860220216, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_Color.r
-      value: 0.5578176
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_Name
@@ -72,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       insertIndex: -1
       addedObject: {fileID: 300144747000172277}
+    - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530101912430453147}
   m_SourcePrefab: {fileID: 100100000, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
 --- !u!1 &8171696551163453107 stripped
 GameObject:
@@ -94,4 +101,28 @@ MonoBehaviour:
   happinessGain: -1
   happinesCostOnBuild: 0
   goldCostOnBuild: 0
+  description: It can drop bombs on enemy.
+  nameText: Bomb Factory
   owner: 0
+--- !u!95 &530101912430453147
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171696551163453107}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a342b250cd5d6864c94eaaf59bdbd922, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
