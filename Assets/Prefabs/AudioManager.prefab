@@ -304,11 +304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38625b3be2075f4bb2954b82ec31e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingMusic: Menu
   musicSource: {fileID: 2764045704529944289}
   SFXSource: {fileID: 1049038602388590541}
   select: {fileID: 8300000, guid: 7917ecffcee3243429b0088ceecd704a, type: 3}
   decline: {fileID: 8300000, guid: 2d2e066b350dd1449ba1f5c7d8e37bfe, type: 3}
   bomb: {fileID: 8300000, guid: 146659f99cd083a41bad168a753cbe51, type: 3}
   win: {fileID: 8300000, guid: 526204b196272f0459e6791c9c4f08a1, type: 3}
-  musicMenu: {fileID: 8300000, guid: 144865fe70eff9f438ee600ac0451862, type: 3}
+  musicMenu: {fileID: 8300000, guid: de28dfbf2816c1d46845eec760663109, type: 3}
   musicGame: {fileID: 8300000, guid: 275d233b914a212499dc460a4c80a5f5, type: 3}
