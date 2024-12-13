@@ -10,14 +10,15 @@ public class Tool
         Debug.LogError("TO CHYBA NIE MA  SENSA");
 
     }
-    
+
 }
 
 public class LittleBoy : Tool
 {
-    
-    public LittleBoy() {
-    targetEnemy= true;
+
+    public LittleBoy()
+    {
+        targetEnemy = true;
     }
 
     const int TIME_RECURSION_TIME_RECURSION_TIME_RECURSION_TIME_RECURSION = 10;

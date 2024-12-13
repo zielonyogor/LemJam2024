@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (currentIndex.y <= -3) currentIndex.y = -2;
         if (currentIndex.y > 0) currentIndex.y = 0;
 
-       
+
 
         Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
@@ -78,6 +78,20 @@ public class PlayerController : MonoBehaviour
         {
             GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
         }
+        else if (currentState == State.TargetOpponent)
+        {
+            GridManager.Instance.SendTerroristAttack(currentIndex);
+        }
+    }
+
+    public void OnCancel(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        if (currentState == State.TargetOpponent)
+        {
+            currentIndex.z = id;
+        }
     }
 
     public void ChangeState(State newState)
@@ -91,5 +105,8 @@ public class PlayerController : MonoBehaviour
         {
             currentIndex.z = id == 0 ? 0 : 1;
         }
+
+        Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
+        transform.position = newPosition;
     }
 }
