@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6546576767234271468
+--- !u!1001 &6490164376239963687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_Name
-      value: Park
+      value: Egg
       objectReference: {fileID: 0}
     - target: {fileID: 2732025275688626623, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,42 +64,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
-      propertyPath: moneyGain
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
-      propertyPath: happinessGain
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
-      propertyPath: goldCostOnBuild
-      value: 15
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7568530946207665430}
     - targetCorrespondingSourceObject: {fileID: 3799426083064799710, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2103015233272190099}
+      addedObject: {fileID: 1190497433442756407}
   m_SourcePrefab: {fileID: 100100000, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
---- !u!1 &7953454824756644146 stripped
+--- !u!1 &5627301282511342266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+  m_PrefabInstance: {fileID: 6490164376239963687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7568530946207665430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627301282511342266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecba16bea2315d408abbd08a24223eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyGain: 1
+  happinessGain: 1
+  happinesCostOnBuild: 50
+  goldCostOnBuild: 701
+  description: 
+  nameText: 
+  owner: 0
+--- !u!1 &7974740215296368633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3799426083064799710, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
-  m_PrefabInstance: {fileID: 6546576767234271468}
+  m_PrefabInstance: {fileID: 6490164376239963687}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2103015233272190099
+--- !u!95 &1190497433442756407
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7953454824756644146}
+  m_GameObject: {fileID: 7974740215296368633}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e668e1a794e61e4a941892238cbd2b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42437b6496607c947bb63ae198e99960, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
