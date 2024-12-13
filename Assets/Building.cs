@@ -4,12 +4,12 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-
+[System.Serializable]
 public class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain = 1;
     [SerializeField] private int happinessGain = 1;
-        uint owner;
+    public uint owner = 0;
 
 
 
@@ -45,7 +45,7 @@ public class Building : MonoBehaviour
     }
 
 
-    public virtual void Select()
+    public virtual void Select(Vector3Int position)
     {
         Debug.Log("co do sigmy");
     }

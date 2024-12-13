@@ -7,25 +7,37 @@ using TMPro;
 public class timer : MonoBehaviour
 {
     [SerializeField] private float durationOfGame = 120;
+
     [SerializeField] private TextMeshProUGUI text;
 
+    [SerializeField] private MenuPause PauseMenu;
+
     public static UnityEvent Timeout = new UnityEvent(); 
+    private bool TimerOn = true;
 
     void Start()
     {
-        StartCoroutine(TimeStep());
+        MenuPause.PauseOn.AddListener(()=>{StopTimer(true);});
+        MenuPause.PauseOff.AddListener(()=>{StopTimer(false);});
     }
 
-    IEnumerator TimeStep()
+    void StopTimer(bool stop)
     {
-        Debug.Log("Time Step");
-        while(durationOfGame>0)
+        TimerOn = !stop;
+    }
+
+    void Update()
+    {
+        if(durationOfGame > 0)
         {
-            durationOfGame-=1;
-            text.text = "Time Left: " + durationOfGame.ToString();
-            yield return new WaitForSeconds(1);
+            if(TimerOn)
+            {
+                durationOfGame -= Time.deltaTime;
+                text.text = "Time Left: " + Mathf.Ceil(durationOfGame).ToString();
+            }
+            return;
         }
         Timeout.Invoke();
-        //Debug.Log("current time stamp : " + time_stamp);
+        durationOfGame = 0;
     }
 }

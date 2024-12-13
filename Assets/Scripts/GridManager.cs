@@ -7,6 +7,15 @@ public class GridManager : MonoBehaviour
     public Vector2Int player1GridStartIndex = new Vector2Int(-5, 3);
     public Vector2Int player2GridStartIndex = new Vector2Int(2, -1);
 
+
+
+
+    public Building[] goofyAssData = new Building[2];
+    public Building[] buildingPlacement = new Building[9];
+
+
+
+
     [SerializeField] Building buildingPrefab;
 
     public Building[,,] gridMatrix = new BuildingProxy[2, 3, 3];
@@ -41,6 +50,7 @@ public class GridManager : MonoBehaviour
             }
 
         }
+        
 
         gridLayout = GetComponent<GridLayout>();
         gap = gridLayout.cellGap.x;
@@ -65,7 +75,8 @@ public class GridManager : MonoBehaviour
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
         Debug.Log(position);
-        gridMatrix[position.z, position.x, -position.y].Select();
+        goofyAssData[position.z] = buildingPlacement[3 * position.x -position.y];
+        gridMatrix[position.z, position.x, -position.y].Select(position);
 
     }
 
@@ -89,10 +100,5 @@ public class GridManager : MonoBehaviour
         Debug.Log(returnVector);
         return returnVector;
 
-
-
     }
-
-
-
 }
