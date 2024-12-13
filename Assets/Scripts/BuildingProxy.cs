@@ -53,6 +53,7 @@ public class BuildingProxy : Building
                 building.transform.position = newPos;
                 Instantiate(Globals.Instance.placeBuildingParticle, building.transform.GetChild(0));
                 GridManager.Instance.buildingPlaced.Invoke();
+
                 index++;
                 building.owner = id;
 

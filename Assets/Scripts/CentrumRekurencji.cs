@@ -3,6 +3,10 @@ using UnityEngine;
 public class CentrumRekurencji : Building
 {
 
+    public int Cooldown;
+    private int currentCooldown;
+    public int happynesGainPerActivation =1;
+    public int goldGainPerActivation = 1;
     public override void Cancel(Vector3Int position, int id)
     {
        
@@ -16,10 +20,17 @@ public class CentrumRekurencji : Building
 
     protected override void ProgressTime()
     {
-        base.ProgressTime();
-        if(TimeManager.instance.time_stamp % 20 == 0)
+        currentCooldown -= 1;
+        if (currentCooldown < 0)
         {
-            moneyGain++;
+
+            currentCooldown = Cooldown;
+            moneyGain += goldGainPerActivation;
+            happinessGain += happynesGainPerActivation;
+
+
+
+
         }
 
     }
