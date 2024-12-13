@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyGain: 1
   happinessGain: -1
-  happinesCostOnBuild: 0
-  goldCostOnBuild: 0
+  happinesCostOnBuild: 10
+  goldCostOnBuild: 30
   description: It can drop bombs on enemy.
   nameText: Bomb Factory
   owner: 0
