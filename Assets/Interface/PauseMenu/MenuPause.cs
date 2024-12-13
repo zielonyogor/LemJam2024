@@ -9,6 +9,11 @@ public class MenuPause : MonoBehaviour
     public static UnityEvent PauseOn = new UnityEvent(); 
     public static UnityEvent PauseOff = new UnityEvent(); 
     
+    void Start()
+    {
+        ReturnToGame();
+    }
+
     public void ReturnToGame()
     {
         Pause = true;
