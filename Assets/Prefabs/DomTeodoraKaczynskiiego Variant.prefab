@@ -62,20 +62,8 @@ PrefabInstance:
       objectReference: {fileID: -1257558648, guid: 81cbdd285f0552b43a070daaeea57f19, type: 3}
     - target: {fileID: 7124360678467882774, guid: a52a49f1809033641bcb6b43d56e8e21, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7124360678467882774, guid: a52a49f1809033641bcb6b43d56e8e21, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7124360678467882774, guid: a52a49f1809033641bcb6b43d56e8e21, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7124360678467882774, guid: a52a49f1809033641bcb6b43d56e8e21, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8171696551163453107, guid: a52a49f1809033641bcb6b43d56e8e21, type: 3}
       propertyPath: m_Name
       value: DomTeodoraKaczynskiiego Variant
