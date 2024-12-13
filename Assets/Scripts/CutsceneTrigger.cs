@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class CutsceneTrigger : MonoBehaviour
 {
-     public Dialouge dialogue;
+    public Dialouge dialogue;
 
-    public void TriggerCutscene() { 
+    private void Start()
+    {
+        TriggerCutscene();
+    }
+    public void TriggerCutscene()
+    {
         FindAnyObjectByType<CutsceneManager>().StartCutscene(dialogue);
     }
 
