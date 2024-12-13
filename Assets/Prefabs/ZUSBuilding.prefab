@@ -88,10 +88,14 @@ PrefabInstance:
       propertyPath: goldCostOnBuild
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805773960787748420}
     - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5121931781517346140}
@@ -101,6 +105,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
   m_PrefabInstance: {fileID: 6689131127568156983}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1805773960787748420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250374728352824746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fde1ff7aca0d5f4c977cc49f284fc34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyGain: 3
+  happinessGain: -1
+  happinesCostOnBuild: 0
+  goldCostOnBuild: 0
+  description: Backbone of society.
+  nameText: Tax Office
+  owner: 0
 --- !u!95 &5121931781517346140
 Animator:
   serializedVersion: 7

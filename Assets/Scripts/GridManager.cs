@@ -70,12 +70,11 @@ public class GridManager : MonoBehaviour
             posX = position.x + player2GridStartIndex.x;
             posY = position.y + player2GridStartIndex.y;
         }
-        Vector3 newCellPos = gridLayout.CellToWorld(new Vector3Int(posX, posY, 0));
-        newCellPos.y -= gap;
+        goofyAssData[position.z] = position.z == 0 ? buildingPlacement1[3 * position.x - position.y] : buildingPlacement2[3 * position.x - position.y];
+
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
         Debug.Log(position);
-        goofyAssData[position.z] = position.z == 0 ? buildingPlacement1[3 * position.x - position.y] : buildingPlacement2[3 * position.x - position.y];
         gridMatrix[position.z, position.x, -position.y].Select(position, id);
 
     }
