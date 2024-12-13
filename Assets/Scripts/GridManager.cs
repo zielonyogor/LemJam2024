@@ -18,7 +18,6 @@ public class GridManager : MonoBehaviour
 
 
 
-    [SerializeField] Building buildingPrefab;
 
     public Building[,,] gridMatrix = new BuildingProxy[2, 3, 3];
 
@@ -82,6 +81,11 @@ public class GridManager : MonoBehaviour
     {
         //Debug.Log(position);
        // goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
+    }
+
+    public Building GetBuildingInfo(Vector3Int position)
+    {
+        return buildingPlacement[3 * position.x - position.y];
     }
 
     public Vector2 GetGridPosition(Vector3Int position)

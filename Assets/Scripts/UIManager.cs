@@ -10,9 +10,17 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI[] happinessText = new TextMeshProUGUI[2];
     public Image[] happinessIcon = new Image[2];
 
-    Sprite HAPINIS5, HAPINIS4, HAPINIS3, HAPINIS2,HAPINIS1;
+    [Header("Description")]
+    public TextMeshProUGUI[] descText = new TextMeshProUGUI[2];
+    public TextMeshProUGUI[] nameText = new TextMeshProUGUI[2];
+    public TextMeshProUGUI[] moneyInfoText = new TextMeshProUGUI[2];
+    public TextMeshProUGUI[] happinessInfoText = new TextMeshProUGUI[2];
+
+    Sprite HAPINIS5, HAPINIS4, HAPINIS3, HAPINIS2, HAPINIS1;
     private void Start()
     {
+        PlayerController.OnPlayerPositionChanged.AddListener(OnGridInfo);
+
         ResourceManager.CountChange.AddListener(CounterUpdate);
         ResourceManager.CountChange.AddListener(IconUpdate);
 
@@ -22,26 +30,27 @@ public class UIManager : MonoBehaviour
         HAPINIS2 = Resources.Load<Sprite>("Happiness2");  // :(
         HAPINIS1 = Resources.Load<Sprite>("Happiness1");  // >:(
     }
-    private void IconUpdate(CounterValues vals) {
+    private void IconUpdate(CounterValues vals)
+    {
         const int happiness = 28;
         switch (vals.happiness)
         {
-                case >= happiness * 2:
-                    happinessIcon[vals.player].sprite = HAPINIS5;
-                    break;
-                case > happiness:
-                    happinessIcon[vals.player].sprite = HAPINIS4;
-                    break;
-                case <= 0 - happiness:
-                    happinessIcon[vals.player].sprite = HAPINIS1;
-                    break;
-                case < 0:
-                    happinessIcon[vals.player].sprite = HAPINIS2;
-                    break;
-                case <= happiness/2:
-                    happinessIcon[vals.player].sprite = HAPINIS3;
-                    break;
-                
+            case >= happiness * 2:
+                happinessIcon[vals.player].sprite = HAPINIS5;
+                break;
+            case > happiness:
+                happinessIcon[vals.player].sprite = HAPINIS4;
+                break;
+            case <= 0 - happiness:
+                happinessIcon[vals.player].sprite = HAPINIS1;
+                break;
+            case < 0:
+                happinessIcon[vals.player].sprite = HAPINIS2;
+                break;
+            case <= happiness / 2:
+                happinessIcon[vals.player].sprite = HAPINIS3;
+                break;
+
 
         }
 
@@ -51,6 +60,12 @@ public class UIManager : MonoBehaviour
         moneyText[vals.player].text = vals.gold.ToString();
         happinessText[vals.player].text = vals.happiness.ToString();
     }
+
+    public void OnGridInfo(Vector3Int position)
+    {
+        Building building = GridManager.Instance.GetBuildingInfo(position);
+        //descText[position.z].text = building.GetDescription();
+    }
 }
 
 public struct CounterValues
@@ -58,13 +73,14 @@ public struct CounterValues
     public int gold;
     public int happiness;
     public uint player;
-    
+
 
     public CounterValues(int gold, int happiness, uint player)
     {
         this.gold = gold;
         this.happiness = happiness;
         this.player = player;
-        
+
     }
+
 }
