@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GridManager : MonoBehaviour
     public Vector2Int player1GridStartIndex = new Vector2Int(-5, 3);
     public Vector2Int player2GridStartIndex = new Vector2Int(2, -1);
 
-
+    public UnityEvent buildingPlaced = new UnityEvent();
 
 
     public Building[] goofyAssData = new Building[2];
