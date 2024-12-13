@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b3f41bf85e1a578498752f1f2da1d202
+guid: 87716dbfddea86f45ae160baadbb0935
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3312671736486598325
-    second: parkblue1_0
+      213: -7965980875964099007
+    second: Cutscene_Anim_real_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parkblue1_0
+      name: Cutscene_Anim_real_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 59
-        height: 62
+        width: 704
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b692ce9469f8fd20800000000000000
-      internalID: 3312671736486598325
+      spriteID: 146da905996237190800000000000000
+      internalID: -7965980875964099007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cutscene_Anim_real_1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 704
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de08c79b9d06db747b0fb8f926d12405
+      internalID: 649533593
       vertices: []
       indices: 
       edges: []
@@ -164,7 +186,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c1f462e939c31f44eb9961fac4adf7f8
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +196,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parkblue1_0: 3312671736486598325
+      Cutscene_Anim_real_0: -7965980875964099007
+      Cutscene_Anim_real_1: 649533593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
