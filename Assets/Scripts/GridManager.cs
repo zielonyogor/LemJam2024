@@ -80,12 +80,13 @@ public class GridManager : MonoBehaviour
 
     public void SendTerroristAttack(Vector3Int position)
     {
-        Debug.Log(position);
-        goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
+        //Debug.Log(position);
+       // goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
     }
 
     public Vector2 GetGridPosition(Vector3Int position)
     {
+        
         int posX, posY;
         if (position.z == 0)
         {
@@ -102,6 +103,7 @@ public class GridManager : MonoBehaviour
 
         Vector2 returnVector = new Vector2(newCellPos.x, newCellPos.y - gap);
 
+        Debug.Log(returnVector);
         return returnVector;
 
     }
