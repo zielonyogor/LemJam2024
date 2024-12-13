@@ -33,7 +33,7 @@ public class timer : MonoBehaviour
             if(TimerOn)
             {
                 durationOfGame -= Time.deltaTime;
-                text.text = "Time Left: " + Mathf.Ceil(durationOfGame).ToString();
+                text.text = Mathf.Ceil(durationOfGame).ToString();
             }
             return;
         }

@@ -6,7 +6,7 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class ResourceManager : MonoBehaviour
 {
-   
+
     public static ResourceManager instance;
     public uint time_stamp = 0;
 
@@ -47,10 +47,9 @@ public class ResourceManager : MonoBehaviour
         CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player,entry.happiness_gain));
     }
 
-    // Update is called once per frame
-    void Update()
+    public int GetPlayerWin()
     {
-
+        return happiness[0] > happiness[1] ? 1 : 2;
     }
 
 }
