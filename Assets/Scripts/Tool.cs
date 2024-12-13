@@ -35,5 +35,23 @@ public class LittleBoy : Tool
 }
 
 
+public class SmellyBomb : Tool
+{
+    public SmellyBomb()
+    {
+        targetEnemy = true;
+    }
+
+    public override void UseTool(Building building)
+    {
+        Debug.Log("bombastycznie");
+
+        building.happinessGain -= 3;
+
+        GridManager.Instance.buildingPlaced.Invoke();
+
+    }
+}
+
 
 

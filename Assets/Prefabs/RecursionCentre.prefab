@@ -154,8 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyGain: 1
   happinessGain: 0
-  happinesCostOnBuild: 1
+  happinesCostOnBuild: 5
   goldCostOnBuild: 60
   description: Generates more gold in long time.
-  nameText: Recursion Centre
+  nameText: Recurcentre
   owner: 0
+  Cooldown: 4
+  happynesGainPerActivation: 0
+  goldGainPerActivation: 3

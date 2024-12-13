@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c3a348624bccf064d8fe1b66dd0f3e7d
+guid: bf69a5ca1aff85540bb78aa22d808483
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3312671736486598325
-    second: parkblue1_0
+      213: -5666329259230324602
+    second: zeppelinblue1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parkblue1_0
+      name: zeppelinblue1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 59
-        height: 62
+        x: 1
+        y: 7
+        width: 63
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b692ce9469f8fd20800000000000000
-      internalID: 3312671736486598325
+      spriteID: 6889c2b6f872d51b0800000000000000
+      internalID: -5666329259230324602
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parkblue1_0: 3312671736486598325
+      zeppelinblue1_0: -5666329259230324602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
