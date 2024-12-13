@@ -348,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6273035948361660066}
   - component: {fileID: 3577500541878977641}
+  - component: {fileID: 6716997106199461570}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -387,6 +388,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ae1c3ccef90e94ca7f3caf3d8d21b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6716997106199461570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927153228975408255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0ffcd05b874a44b9cdafb4c579cb2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VolumeSliderObject: {fileID: 5238630331763870457}
+  StartValue: 0
 --- !u!1 &5180990062789671932
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -954356315162360505, guid: a620588bcec9fed4d840c56fbfb0447e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a620588bcec9fed4d840c56fbfb0447e, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

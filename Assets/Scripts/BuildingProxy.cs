@@ -53,7 +53,7 @@ public class BuildingProxy : Building
                 building.transform.position = newPos;
                 Instantiate(Globals.Instance.placeBuildingParticle, building.transform.GetChild(0));
                 GridManager.Instance.buildingPlaced.Invoke();
-
+                MusicManager.Instance.PlaySelectSound();
                 index++;
                 building.owner = id;
 
@@ -70,5 +70,6 @@ public class BuildingProxy : Building
         {
             GridManager.Instance.goofyAssTools[id] = null;
         }
+        MusicManager.Instance.PlayDeclineSound();
     }
 }

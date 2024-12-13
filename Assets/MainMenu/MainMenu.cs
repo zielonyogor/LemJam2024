@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private bool defaultScene = true;
+
     [SerializeField] private GameObject MainMenuUI;
     [SerializeField] private GameObject OptionsUI;
     [SerializeField] private GameObject HowToPlayUI;
