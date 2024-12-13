@@ -28,6 +28,7 @@ public class LittleBoy : Tool
         Debug.Log("bombastycznie");
 
         building.TerroristAttack(TIME_RECURSION_TIME_RECURSION_TIME_RECURSION_TIME_RECURSION);
+        
     }
 }
 

@@ -81,11 +81,11 @@ public class PlayerController : MonoBehaviour
 
         if (currentState == State.Basic)
         {
-            GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
+            GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id),(uint)id);
         }
         else if (currentState == State.TargetOpponent)
         {
-            GridManager.Instance.SendTerroristAttack(currentIndex);
+            GridManager.Instance.SpawnBuildingAtPosition(currentIndex,(uint)id);
         }
     }
 
