@@ -52,7 +52,7 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
-       
+
     }
 
     public void SpawnBuildingAtPosition(Vector3Int position)
@@ -78,6 +78,12 @@ public class GridManager : MonoBehaviour
 
     }
 
+    public void SendTerroristAttack(Vector3Int position)
+    {
+        Debug.Log(position);
+        goofyAssTools[position.z].UseTool(gridMatrix[position.z, position.x, -position.y]);
+    }
+
     public Vector2 GetGridPosition(Vector3Int position)
     {
         int posX, posY;
@@ -91,11 +97,11 @@ public class GridManager : MonoBehaviour
             posX = position.x + player2GridStartIndex.x;
             posY = position.y + player2GridStartIndex.y;
         }
-        
+
         Vector3 newCellPos = gridLayout.CellToWorld(new Vector3Int(posX, posY, 0));
 
         Vector2 returnVector = new Vector2(newCellPos.x, newCellPos.y - gap);
-        
+
         return returnVector;
 
     }
