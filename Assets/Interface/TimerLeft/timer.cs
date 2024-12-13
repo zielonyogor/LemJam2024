@@ -10,15 +10,13 @@ public class timer : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI text;
 
-    [SerializeField] private MenuPause PauseMenu;
-
-    public static UnityEvent Timeout = new UnityEvent(); 
+    public static UnityEvent Timeout = new UnityEvent();
     private bool TimerOn = true;
 
     void Start()
     {
-        MenuPause.PauseOn.AddListener(()=>{StopTimer(true);});
-        MenuPause.PauseOff.AddListener(()=>{StopTimer(false);});
+        MenuPause.PauseOn.AddListener(() => { StopTimer(true); });
+        MenuPause.PauseOff.AddListener(() => { StopTimer(false); });
     }
 
     void StopTimer(bool stop)
@@ -28,9 +26,9 @@ public class timer : MonoBehaviour
 
     void Update()
     {
-        if(durationOfGame > 0)
+        if (durationOfGame > 0)
         {
-            if(TimerOn)
+            if (TimerOn)
             {
                 durationOfGame -= Time.deltaTime;
                 text.text = Mathf.Ceil(durationOfGame).ToString();
