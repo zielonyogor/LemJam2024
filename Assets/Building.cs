@@ -33,13 +33,20 @@ public class Building : MonoBehaviour
     }
 
 
-    public void TerroristAttack(int litme_reversed)
+    public void TerroristAttack(int timeReversed)
     {
 
         uint currentTimeStamp = TimeManager.instance.time_stamp;
 
 
+        uint RevertTime = currentTimeStamp - (uint)timeReversed;    
 
+    }
+
+
+    public virtual void Select()
+    {
+        Debug.Log("co do sigmy");
     }
 }
 

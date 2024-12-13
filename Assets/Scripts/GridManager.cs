@@ -9,7 +9,7 @@ public class GridManager : MonoBehaviour
 
     [SerializeField] Building buildingPrefab;
 
-    public Building[,,] gridMatrix = new Building[2, 3, 3];
+    public Building[,,] gridMatrix = new BuildingProxy[2, 3, 3];
 
     private GridLayout gridLayout;
     private float gap;
@@ -48,8 +48,11 @@ public class GridManager : MonoBehaviour
         }
         Vector3 newCellPos = gridLayout.CellToWorld(new Vector3Int(posX, posY, 0));
         newCellPos.y -= gap;
-        Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
-        gridMatrix[position.z, position.x, position.y] = newBuilding;
+        //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
+        //gridMatrix[position.z, position.x, position.y] = newBuilding;
+        Debug.Log("Selecting building");
+        gridMatrix[position.z, position.x, position.y].Select();
+
     }
 
     public Vector2 GetGridPosition(Vector3Int position)
