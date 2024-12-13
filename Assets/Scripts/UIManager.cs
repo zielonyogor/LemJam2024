@@ -58,13 +58,13 @@ public struct CounterValues
     public int gold;
     public int happiness;
     public uint player;
-    public int happiness_gain;
+    
 
-    public CounterValues(int gold, int happiness, uint player, int happiness_gain)
+    public CounterValues(int gold, int happiness, uint player)
     {
         this.gold = gold;
         this.happiness = happiness;
         this.player = player;
-        this.happiness_gain = happiness_gain;
+        
     }
 }
