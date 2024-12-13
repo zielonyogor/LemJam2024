@@ -267,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036244323526412326}
-  - component: {fileID: 992828363240655740}
+  - component: {fileID: 8536701177651817732}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -292,7 +292,7 @@ Transform:
   - {fileID: 6485726210904089751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &992828363240655740
+--- !u!114 &8536701177651817732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,16 +301,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9061638594719427063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38625b3be2075f4bb2954b82ec31e44, type: 3}
+  m_Script: {fileID: 11500000, guid: ef61fa53f98b1994fa3e9107cab8f139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMusic: Menu
+  DontDestroy: 1
+  currentScene: Menu
   musicSource: {fileID: 2764045704529944289}
   SFXSource: {fileID: 1049038602388590541}
-  select: {fileID: 8300000, guid: 7917ecffcee3243429b0088ceecd704a, type: 3}
-  decline: {fileID: 8300000, guid: 2d2e066b350dd1449ba1f5c7d8e37bfe, type: 3}
-  bomb: {fileID: 8300000, guid: 146659f99cd083a41bad168a753cbe51, type: 3}
-  win: {fileID: 8300000, guid: 526204b196272f0459e6791c9c4f08a1, type: 3}
-  click: {fileID: 8300000, guid: 149aca76c92800d458c6d55e3a3e9801, type: 3}
+  select: {fileID: 8300000, guid: 668ca4b0c78d45947849f6515ede4b7b, type: 3}
+  decline: {fileID: 8300000, guid: 35258b9bdb2734f428998d9e248a0284, type: 3}
+  bomb: {fileID: 8300000, guid: b76dbd9d0f262b14391b12b84d787fb4, type: 3}
+  win: {fileID: 8300000, guid: 02ccabf55adb0e7459bed56f378c14e8, type: 3}
+  click: {fileID: 8300000, guid: f9cf7ced80a402447b7b4e651347a3b0, type: 3}
   musicMenu: {fileID: 8300000, guid: de28dfbf2816c1d46845eec760663109, type: 3}
   musicGame: {fileID: 8300000, guid: 275d233b914a212499dc460a4c80a5f5, type: 3}

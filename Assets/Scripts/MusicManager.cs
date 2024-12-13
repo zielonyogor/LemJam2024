@@ -50,45 +50,17 @@ public class MusicManager : MonoBehaviour
     {
         if(currentScene == "Game")
         {
-            //Debug.Log("Game play");
+            Debug.Log("Game play");
             PlayMusicGame();
         }
         else
         {
-            //Debug.Log("Menu play");
+            Debug.Log("Menu play");
             PlayMenuMusic();
         }
-        //GameObject AudioButtons = GameObject.Find("ButtonSFXHandler");
-        
-        //AudioButtons.GetComponent<AudioForButtons>.Bind();
-        //if(FindObjectsOfType<AudioForButtons>().Length >= 1)
-        //{
-        //    Debug.Log(AudioButtons);
-        //}
-        //DontDestroyOnLoad(this.gameObject);
-
-
-
-        //SceneManager.sceneLoaded.AddListener(() => { NewScene(); });
-        
     }
 
-    /*void Update()
-    {
-        if(!loaded)
-        {
-            GameObject AudioButtons = GameObject.Find("ButtonSFXHandler");
-            if (AudioButtons != null)
-            {
-                loaded = true;
-                Debug.Log(AudioButtons);
-                AudioButtons.GetComponent<AudioForButtons>().Bind(AudioButtons);
-                //AudioButtons.GetComponent<AudioForButtons>.Bind();
-            }
-        }
-    }*/
-
-    void OnEnable()
+    /*void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -102,7 +74,7 @@ public class MusicManager : MonoBehaviour
     {
         //Debug.Log("nowa scena");
         NewScene(scene.name);
-    }
+    }*/
 
     public void PlayMenuMusic()
     {
@@ -120,38 +92,29 @@ public class MusicManager : MonoBehaviour
 
     public void PlaySelectSound()
     {
-        //SFXSource.clip = select;
         SFXSource.PlayOneShot(select);
     }
 
     public void PlayClickSound()
     {
-        //SFXSource.clip = click;
-        //SFXSource.clip = select;
         SFXSource.PlayOneShot(select);
     }
 
     public void PlayDeclineSound()
     {
-        //SFXSource.clip = click;
-        //SFXSource.clip = decline;
         SFXSource.PlayOneShot(decline);
     }
 
     public void PlayBombSound()
     {
-        //SFXSource.clip = click;
-        //SFXSource.clip = bomb;
         SFXSource.PlayOneShot(bomb);
     }
 
     public void PlayWinSound()
     {
-        //SFXSource.clip = click;
-        //SFXSource.clip = win;
         SFXSource.PlayOneShot(win);
     }
-    public void NewScene(string sceneName)
+    /*public void NewScene(string sceneName)
     {
         loaded = false;
         Debug.Log("Scena: "+sceneName);
@@ -168,7 +131,8 @@ public class MusicManager : MonoBehaviour
             PlayMenuMusic();
         }
         SceneChanged.Invoke();
-    }
+    }*/
+}
 
 
 
