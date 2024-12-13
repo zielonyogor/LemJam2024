@@ -31,6 +31,7 @@ public class BuildingProxy : Building
             Tool stupidTool = GridManager.Instance.goofyAssTools[position.z];
             if (stupidTool != null)
             {
+                Debug.Log("using tool");
                 stupidTool.UseTool(building);
                 
             }else
