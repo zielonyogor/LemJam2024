@@ -36,7 +36,7 @@ public class PlayerInput : MonoBehaviour
         if (currentIndex.y <= -3) currentIndex.y = -2;
         if (currentIndex.y > 0) currentIndex.y = 0;
 
-        Debug.Log("Current player Local Position: " + currentIndex);
+       
 
         Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;

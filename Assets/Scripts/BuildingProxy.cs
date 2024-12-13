@@ -9,7 +9,7 @@ public class BuildingProxy : Building
 
     //[SerializeField] GameObject buildPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void  Start()
     {
         
     }
@@ -23,9 +23,18 @@ public class BuildingProxy : Building
 
     public override void  Select(Vector3Int position)
     {
+
+        
+
         if (building != null)
         {
-            building.Select(position);
+            Tool stupidTool = GridManager.Instance.goofyAssTools[position.z];
+            if (stupidTool != null)
+            {
+                stupidTool.UseTool(building);
+                
+            }else
+                building.Select(position);
         }
         else
         {

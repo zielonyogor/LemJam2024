@@ -11,6 +11,8 @@ public class GridManager : MonoBehaviour
 
 
     public Building[] goofyAssData = new Building[2];
+
+    public Tool[] goofyAssTools = new Tool[2];
     public Building[] buildingPlacement = new Building[9];
 
 
@@ -45,7 +47,7 @@ public class GridManager : MonoBehaviour
                 for(int k = 0; k < 3; k++)
                 {
 
-                    gridMatrix[i, j, k] = new BuildingProxy();
+                    gridMatrix[i, j, k] = new GameObject("gridProxy").AddComponent<BuildingProxy>();
                 }
             }
 
@@ -54,7 +56,7 @@ public class GridManager : MonoBehaviour
 
         gridLayout = GetComponent<GridLayout>();
         gap = gridLayout.cellGap.x;
-        Debug.Log(gap);
+        
     }
 
     public void SpawnBuildingAtPosition(Vector3Int position)
@@ -74,7 +76,7 @@ public class GridManager : MonoBehaviour
         newCellPos.y -= gap;
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
-        Debug.Log(position);
+       
         goofyAssData[position.z] = buildingPlacement[3 * position.x -position.y];
         gridMatrix[position.z, position.x, -position.y].Select(position);
 
@@ -93,11 +95,11 @@ public class GridManager : MonoBehaviour
             posX = position.x + player2GridStartIndex.x;
             posY = position.y + player2GridStartIndex.y;
         }
-        Debug.Log(posX + " : " + posY);
+        
         Vector3 newCellPos = gridLayout.CellToWorld(new Vector3Int(posX, posY, 0));
 
         Vector2 returnVector = new Vector2(newCellPos.x, newCellPos.y - gap);
-        Debug.Log(returnVector);
+        
         return returnVector;
 
     }

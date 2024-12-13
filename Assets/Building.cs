@@ -2,6 +2,8 @@ using NUnit.Framework;
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
+using System.Linq;
 
 
 [System.Serializable]
@@ -9,15 +11,22 @@ public class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain = 1;
     [SerializeField] private int happinessGain = 1;
+    [SerializeField] private int happinesCostOnBuild = 50;
+    [SerializeField] private int goldCostOnBuild =701;
+
     public uint owner = 0;
 
 
 
     public List<HistoryEntry> history = new List<HistoryEntry>();
 
-    private void Start()
+    public virtual void Start()
     {
+        
         TimeManager.instance.TimeProgressed.AddListener(ProgressTime);
+        history.Add(new BuildHistoryEntry(goldCostOnBuild, happinesCostOnBuild, owner, this));
+        
+        
     }
 
     void ProgressTime()
@@ -40,7 +49,17 @@ public class Building : MonoBehaviour
         uint currentTimeStamp = TimeManager.instance.time_stamp;
 
 
-        uint RevertTime = currentTimeStamp - (uint)timeReversed;    
+        uint RevertTime = currentTimeStamp - (uint)timeReversed;
+
+
+        foreach (var item in history.Where(X => X.time_stamp >= RevertTime))
+        {
+            item.Revert();
+            history.Remove(item);
+            
+        }
+
+        
 
     }
 
@@ -51,7 +70,7 @@ public class Building : MonoBehaviour
     }
 }
 
-public struct HistoryEntry
+public class HistoryEntry
 {
     public uint time_stamp;
     public int happiness_gain;
@@ -68,15 +87,54 @@ public struct HistoryEntry
 
     }
 
-    public void Revert()
+    public virtual void Revert()
     {
         ResourceManager.instance.SubtractResources(this);
 
 
     }
 
+   
 
 
+
+
+
+
+}
+
+public class BuildHistoryEntry : HistoryEntry
+{
+
+    Building b;
+    public BuildHistoryEntry(int gold, int happiness, uint player, Building b) : base(-gold, -happiness, player)
+    {
+
+        if (ResourceManager.instance.CheckPlayerResources(player))
+        {
+            this.b = b;
+
+        }
+        else
+        {
+
+            GameObject.Destroy(b.gameObject);
+            Revert();
+        }
+        
+
+
+
+    }
+
+    public override void Revert()
+    {
+        base.Revert();
+
+        if (b != null) 
+            GameObject.Destroy(b.gameObject);
+        
+    }
 
 
 

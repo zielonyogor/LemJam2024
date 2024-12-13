@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     {
         moneyText[vals.player].text = vals.gold.ToString();
         happinessText[vals.player].text = vals.happiness.ToString();
-        Debug.Log("COUNT CHANGE!");
+        
 
     }   
 }

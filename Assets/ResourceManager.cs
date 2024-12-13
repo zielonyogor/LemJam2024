@@ -33,7 +33,7 @@ public class ResourceManager : MonoBehaviour
     }
     public void AddResources(HistoryEntry entry)
     {
-        Debug.Log("AMOGUS 1");
+        
         happiness[entry.player] += entry.happiness_gain;
         gold[entry.player] += entry.gold_gain;
         CountChange.Invoke(new CounterValues(gold[entry.player],happiness[entry.player],entry.player));
@@ -41,11 +41,26 @@ public class ResourceManager : MonoBehaviour
 
     public void SubtractResources(HistoryEntry entry)
     {
-        Debug.Log("AMOGUS 2");
+        
         happiness[entry.player] -= entry.happiness_gain;
         gold[entry.player] -= entry.gold_gain;
         CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player));
     }
+
+
+
+
+    public bool CheckPlayerResources(uint player)
+    {
+        bool x = true;
+        x &= gold[player]>=0;
+        //x&= happiness[player]>=0;
+
+        return x;
+
+    }
+
+
 
     // Update is called once per frame
     void Update()
