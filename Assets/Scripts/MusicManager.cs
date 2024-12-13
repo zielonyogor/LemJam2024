@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
+    [SerializeField] private bool DontDestroy = true;
     [SerializeField] private string currentScene = "Menu";
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
@@ -21,8 +22,15 @@ public class MusicManager : MonoBehaviour
 
     public static MusicManager Instance { get; private set; }
 
-    void Awake()
+    private bool loaded = false;
+
+    /*void Awake()
     {
+        if(!DontDestroy)
+        {
+            return;
+        }
+
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -32,15 +40,11 @@ public class MusicManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this);
         }
-        if(FindObjectsOfType<AudioForButtons>().Length >= 1)
-        {
-            FindObjectOfType<AudioForButtons>().Bind();
-        }
-    }
+        
+    }*/
 
     void Start()
     {
-        Debug.Log(currentScene);
         if(currentScene == "Game")
         {
             //Debug.Log("Game play");
@@ -51,6 +55,13 @@ public class MusicManager : MonoBehaviour
             //Debug.Log("Menu play");
             PlayMenuMusic();
         }
+        //GameObject AudioButtons = GameObject.Find("ButtonSFXHandler");
+        
+        //AudioButtons.GetComponent<AudioForButtons>.Bind();
+        //if(FindObjectsOfType<AudioForButtons>().Length >= 1)
+        //{
+        //    Debug.Log(AudioButtons);
+        //}
         //DontDestroyOnLoad(this.gameObject);
 
 
@@ -58,6 +69,21 @@ public class MusicManager : MonoBehaviour
         //SceneManager.sceneLoaded.AddListener(() => { NewScene(); });
         
     }
+
+    /*void Update()
+    {
+        if(!loaded)
+        {
+            GameObject AudioButtons = GameObject.Find("ButtonSFXHandler");
+            if (AudioButtons != null)
+            {
+                loaded = true;
+                Debug.Log(AudioButtons);
+                AudioButtons.GetComponent<AudioForButtons>().Bind(AudioButtons);
+                //AudioButtons.GetComponent<AudioForButtons>.Bind();
+            }
+        }
+    }*/
 
     void OnEnable()
     {
@@ -124,6 +150,7 @@ public class MusicManager : MonoBehaviour
     }
     public void NewScene(string sceneName)
     {
+        loaded = false;
         Debug.Log("Scena: "+sceneName);
         if(currentScene == "Menu")
         {
