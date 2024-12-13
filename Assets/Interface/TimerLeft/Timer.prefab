@@ -86,11 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4489478398039293239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98010bbf6e851940a82812fe9aa17e8, type: 3}
+  m_Script: {fileID: 11500000, guid: da42407c49e9f084782de7bb1da9bda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   durationOfGame: 120
   text: {fileID: 2401006811682531992}
+  PauseMenu: {fileID: 0}
 --- !u!1 &4756479439804352179
 GameObject:
   m_ObjectHideFlags: 0
