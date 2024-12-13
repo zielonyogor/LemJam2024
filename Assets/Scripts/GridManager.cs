@@ -16,6 +16,7 @@ public class GridManager : MonoBehaviour
 
     private void Awake()
     {
+
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -28,6 +29,19 @@ public class GridManager : MonoBehaviour
 
     private void Start()
     {
+        for(int i = 0; i < 2; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                for(int k = 0; k < 3; k++)
+                {
+
+                    gridMatrix[i, j, k] = new BuildingProxy();
+                }
+            }
+
+        }
+
         gridLayout = GetComponent<GridLayout>();
         gap = gridLayout.cellGap.x;
         Debug.Log(gap);
@@ -36,7 +50,7 @@ public class GridManager : MonoBehaviour
     public void SpawnBuildingAtPosition(Vector3Int position)
     {
         int posX, posY;
-        if (position.z == 1) // which player - Z
+        if (position.z == 0) // which player - Z
         {
             posX = position.x + player1GridStartIndex.x;
             posY = position.y + player1GridStartIndex.y;
@@ -50,15 +64,15 @@ public class GridManager : MonoBehaviour
         newCellPos.y -= gap;
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
-        Debug.Log("Selecting building");
-        gridMatrix[position.z, position.x, position.y].Select();
+        Debug.Log(position);
+        gridMatrix[position.z, position.x, -position.y].Select();
 
     }
 
     public Vector2 GetGridPosition(Vector3Int position)
     {
         int posX, posY;
-        if (position.z == 1)
+        if (position.z == 0)
         {
             posX = position.x + player1GridStartIndex.x;
             posY = position.y + player1GridStartIndex.y;

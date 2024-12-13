@@ -29,9 +29,12 @@ public class TimeManager : MonoBehaviour
 
     IEnumerator TimeStep()
     {
-        time_stamp++;
-        yield return new WaitForSeconds(1);
-        //Debug.Log("current time stamp : " + time_stamp);
+        while (true)
+        {
+            time_stamp++;
+            yield return new WaitForSeconds(1);
+            TimeProgressed.Invoke();
+        }
     }
 
 

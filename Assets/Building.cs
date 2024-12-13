@@ -7,8 +7,8 @@ using System.Collections.Generic;
 
 public class Building : MonoBehaviour
 {
-    [SerializeField] private int moneyGain = 0;
-    [SerializeField] private int happinessGain = 0;
+    [SerializeField] private int moneyGain = 1;
+    [SerializeField] private int happinessGain = 1;
         uint owner;
 
 
@@ -22,6 +22,7 @@ public class Building : MonoBehaviour
 
     void ProgressTime()
     {
+        
         if (moneyGain != 0 || happinessGain != 0)
             history.Add(new HistoryEntry(moneyGain, happinessGain, owner));
 

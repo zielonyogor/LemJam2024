@@ -66,11 +66,11 @@ public class PlayerInput : MonoBehaviour
         currentState = newState;
         if (newState == State.TargetOpponent)
         {
-            currentIndex.z = id == 1 ? 2 : 1;
+            currentIndex.z = id == 0 ? 1 : 0;
         }
         else
         {
-            currentIndex.z = id == 1 ? 1 : 2;
+            currentIndex.z = id == 0 ? 0 : 1;
         }
     }
 }

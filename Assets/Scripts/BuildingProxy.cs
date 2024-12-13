@@ -21,7 +21,6 @@ public class BuildingProxy : Building
 
     public override void  Select()
     {
-        Debug.Log("building proxy is selected");
         if (building != null)
         {
             building.Select();
@@ -36,6 +35,7 @@ public class BuildingProxy : Building
             {
                 building = new GameObject("BBBB").AddComponent<BombFactory>();
             }
+            index++;
 
         }
 
