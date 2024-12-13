@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      redbombfactory_4_0: -8803951553136487811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
