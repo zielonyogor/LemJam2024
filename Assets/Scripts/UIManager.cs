@@ -64,7 +64,10 @@ public class UIManager : MonoBehaviour
     public void OnGridInfo(Vector3Int position)
     {
         Building building = GridManager.Instance.GetBuildingInfo(position);
-        //descText[position.z].text = building.GetDescription();
+        descText[position.z].text = building.GetDescription() + $"Costs: {building.goldCostOnBuild} coins and {building.happinesCostOnBuild} happiness.";
+        nameText[position.z].text = building.GetName();
+        moneyInfoText[position.z].text = building.moneyGain.ToString() + "/s";
+        happinessInfoText[position.z].text = building.happinessGain.ToString() + "/s";
     }
 }
 

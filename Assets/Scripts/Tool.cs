@@ -26,7 +26,9 @@ public class LittleBoy : Tool
     public override void UseTool(Building building)
     {
         Debug.Log("bombastycznie");
+
         building.TerroristAttack(TIME_RECURSION_TIME_RECURSION_TIME_RECURSION_TIME_RECURSION);
+        
     }
 }
 

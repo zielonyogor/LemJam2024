@@ -1,3 +1,6 @@
+
+using System.Runtime.CompilerServices;
+
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -167,4 +170,5 @@ public class MusicManager : MonoBehaviour
         SceneChanged.Invoke();
     }
 
-}
+
+

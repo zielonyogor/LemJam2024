@@ -11,12 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        if(defaultScene)
-        {
-            SceneManager.LoadScene("SampleScene");
-            return;
-        }
-        SceneManager.LoadScene("LX2");
+        SceneManager.LoadScene("Cutscene");
     }
 
     public void Options()

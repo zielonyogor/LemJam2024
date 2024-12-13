@@ -9,9 +9,9 @@ public class BombFactory : Building
         base.Start();
     }
 
-    public override void Select(Vector3Int position)
+    public override void Select(Vector3Int position, uint id)
     {
-        GridManager.Instance.goofyAssTools[position.z] = new LittleBoy();
+        GridManager.Instance.goofyAssTools[id] = new LittleBoy();
         Debug.Log("aaaaaa bomba");
         PlayerStateManager.Instance.ChangeStateOfPlayer(owner, State.TargetOpponent);
     }
