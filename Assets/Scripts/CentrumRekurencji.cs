@@ -14,5 +14,15 @@ public class CentrumRekurencji : Building
     }
 
 
+    protected override void ProgressTime()
+    {
+        base.ProgressTime();
+        if(TimeManager.instance.time_stamp % 20 == 0)
+        {
+            moneyGain++;
+        }
+
+    }
+
 
 }

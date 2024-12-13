@@ -40,6 +40,7 @@ public class BuildingProxy : Building
                     PlayerStateManager.Instance.ChangeStateOfPlayer(id, State.Basic);
                 GridManager.Instance.goofyAssTools[id] = null;
 
+
             }
             else
                 building.Select(position, id);
@@ -51,7 +52,7 @@ public class BuildingProxy : Building
                 Vector2 newPos = GridManager.Instance.GetGridPosition(position);
                 building.transform.position = newPos;
                 Instantiate(Globals.Instance.placeBuildingParticle, building.transform.GetChild(0));
-
+                GridManager.Instance.buildingPlaced.Invoke();
                 index++;
                 building.owner = id;
 
