@@ -9,7 +9,7 @@ public class Building : MonoBehaviour
 {
     [SerializeField] private int moneyGain = 0;
     [SerializeField] private int happinessGain = 0;
-        uint owner;
+        uint owner = 0;
 
 
 
@@ -33,13 +33,20 @@ public class Building : MonoBehaviour
     }
 
 
-    public void TerroristAttack(int litme_reversed)
+    public void TerroristAttack(int timeReversed)
     {
 
         uint currentTimeStamp = TimeManager.instance.time_stamp;
 
 
+        uint RevertTime = currentTimeStamp - (uint)timeReversed;    
 
+    }
+
+
+    public virtual void Select()
+    {
+        Debug.Log("co do sigmy");
     }
 }
 
