@@ -176,7 +176,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -311,5 +311,6 @@ MonoBehaviour:
   decline: {fileID: 8300000, guid: 2d2e066b350dd1449ba1f5c7d8e37bfe, type: 3}
   bomb: {fileID: 8300000, guid: 146659f99cd083a41bad168a753cbe51, type: 3}
   win: {fileID: 8300000, guid: 526204b196272f0459e6791c9c4f08a1, type: 3}
+  click: {fileID: 8300000, guid: 149aca76c92800d458c6d55e3a3e9801, type: 3}
   musicMenu: {fileID: 8300000, guid: de28dfbf2816c1d46845eec760663109, type: 3}
   musicGame: {fileID: 8300000, guid: 275d233b914a212499dc460a4c80a5f5, type: 3}

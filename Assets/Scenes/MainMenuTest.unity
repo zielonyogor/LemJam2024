@@ -831,7 +831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbeed117b2b52d4e973cf93459dbc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultScene: 0
   MainMenuUI: {fileID: 962017857}
   OptionsUI: {fileID: 1702212347}
   HowToPlayUI: {fileID: 1205219286}
@@ -1201,10 +1200,6 @@ PrefabInstance:
       propertyPath: musicMenu
       value: 
       objectReference: {fileID: 8300000, guid: de28dfbf2816c1d46845eec760663109, type: 3}
-    - target: {fileID: 992828363240655740, guid: 22b7c3982f1e58b43890c423b14f80ed, type: 3}
-      propertyPath: currentScene
-      value: Game
-      objectReference: {fileID: 0}
     - target: {fileID: 2036244323526412326, guid: 22b7c3982f1e58b43890c423b14f80ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.610416
@@ -1695,14 +1690,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
@@ -1714,15 +1705,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1242590340}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1242590340}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
@@ -1734,10 +1717,6 @@ PrefabInstance:
       value: PlayClickSound
       objectReference: {fileID: 0}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: NewScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1746,15 +1725,7 @@ PrefabInstance:
       value: MusicManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MusicManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694572868890492379, guid: d7257e3bef297254f82d703009a1840f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1704049515476319403, guid: d7257e3bef297254f82d703009a1840f, type: 3}
