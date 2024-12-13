@@ -43,7 +43,10 @@ public class BuildingProxy : Building
 
             }
             else
+            {
+                Debug.Log("blagam00");
                 building.Select(position, id);
+            }
         }
         else if (stupidTool == null)
         {

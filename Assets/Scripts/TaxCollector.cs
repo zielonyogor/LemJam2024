@@ -17,6 +17,7 @@ public class TaxCollector : Building
         happinessGain = hapynesFromPower[power];
         moneyGain = goldFromPower[power];
 
+        Debug.Log("new production of tax collector: " + happinessGain + " / " + moneyGain);
     }
 
     public override void Cancel(Vector3Int position, int id)
