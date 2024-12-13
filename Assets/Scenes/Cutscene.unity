@@ -358,11 +358,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_fontSize
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_margin.x
+      value: 7.9414215
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_margin.z
+      value: -2.382431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.7132075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.08557291
       objectReference: {fileID: 0}
     - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_fontSizeBase
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140928423198057154, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290117654
       objectReference: {fileID: 0}
     - target: {fileID: 4622487954679713775, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_IsActive
@@ -450,19 +474,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6857410588145060940, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 156.174
+      value: 163.72
       objectReference: {fileID: 0}
     - target: {fileID: 6857410588145060940, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.5636
+      value: 34.9607
       objectReference: {fileID: 0}
     - target: {fileID: 6857410588145060940, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28.4569
+      value: 27.062
       objectReference: {fileID: 0}
     - target: {fileID: 6857410588145060940, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.29800034
+      value: -0.099500656
       objectReference: {fileID: 0}
     - target: {fileID: 7285199260465896500, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_IsActive
@@ -495,6 +519,141 @@ PrefabInstance:
     - target: {fileID: 7643857126940670751, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291887139
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: dialogue.names.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[0]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[1]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[2]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[3]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[4]'
+      value: Klapcjusz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[5]'
+      value: Turl
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[6]'
+      value: Klap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[7]'
+      value: Klap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[8]'
+      value: Turl
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[9]'
+      value: Klap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[10]'
+      value: Turl
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[11]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[12]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[13]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.names.Array.data[14]'
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Klapcujsz's and Turl's showoff didn't go in their failure and even theirs
+        sycophantic ordeals towards the King Hipolip didn't help them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: 'They learned that all attempts of imitating gods creation are complely
+        quixotic. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: Perfect abscence of painful experiences is unachievable or at least
+        unmesurable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[3]'
+      value: 'But after all they didn''t learn how to shove their ego into dark box
+        after a terrible failure as an constructors. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[4]'
+      value: It doesn't matter if our worlds are inperfect. One of them must be imperatively
+        better in making it's inhabitants happy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[5]'
+      value: That's exactly an opposite of the moral that we should get out of this
+        experience.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[6]'
+      value: No, I am talking about the worlds that are mesurable, ones with matter
+        and time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[7]'
+      value: We can compare who did better job at creating utopia even if it wasnt
+        fully sucessful
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[8]'
+      value: Hanky-panky.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[9]'
+      value: Well, you just know that I did a better job than you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[10]'
+      value: Oh my, oh my dear. Your halcyon will end as soon as we will mesure everything
+        we can here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[11]'
+      value: And as they said that the gears started roatating, their hammers clanking..
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[12]'
+      value: and in no time they created a perfect ruler for mesuring happines of
+        creatures from minature worlds stored in boxes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206211770754414088, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[13]'
+      value: Then they watched and counted until the moment they found out who was
+        better at imitating an act of godly creation.
       objectReference: {fileID: 0}
     - target: {fileID: 8450887018125420543, guid: 45fe433f2159eeb4dbe7be7f047a72c2, type: 3}
       propertyPath: m_text

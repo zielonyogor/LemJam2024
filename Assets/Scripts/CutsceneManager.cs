@@ -11,40 +11,44 @@ public class CutsceneManager : MonoBehaviour
 
     private Queue sentences;
     private Queue names;
-   
-    void Start()
+
+    void Awake()
     {
         sentences = new Queue();
         names = new Queue();
-        
+
     }
-    public void StartCutscene (Dialouge dialouge)
+    public void StartCutscene(Dialouge dialouge)
     {
 
 
         sentences.Clear();
-        foreach (string sentence in dialouge.sentences) { 
+        foreach (string sentence in dialouge.sentences)
+        {
             sentences.Enqueue(sentence);
-        }        
-        
+        }
+
         names.Clear();
-        foreach (string name in dialouge.names) { 
+        foreach (string name in dialouge.names)
+        {
             names.Enqueue(name);
         }
 
         DisplayNextSentence();
-  
+
 
     }
-    public void SkipAll () {
+    public void SkipAll()
+    {
         SceneManager.LoadScene("SampleScene");
     }
-    
-    public void DisplayNextSentence() {
+
+    public void DisplayNextSentence()
+    {
         if (sentences.Count == 0)
         {
             EndDialogue();
-            
+
             return;
         }
         string sentence = (string)sentences.Dequeue();
@@ -53,12 +57,12 @@ public class CutsceneManager : MonoBehaviour
         string name = (string)names.Dequeue();
         nameText.text = name;
 
-     }
+    }
 
 
-     void EndDialogue()
+    void EndDialogue()
     {
         SceneManager.LoadScene("SampleScene");
     }
-    
+
 }
