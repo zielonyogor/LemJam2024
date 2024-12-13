@@ -36,27 +36,23 @@ public class GridManager : MonoBehaviour
         {
             Instance = this;
         }
+        gap = gridLayout.cellGap.x;
     }
 
     private void Start()
     {
-        for(int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
-            for(int j = 0; j < 3; j++)
+            for (int j = 0; j < 3; j++)
             {
-                for(int k = 0; k < 3; k++)
+                for (int k = 0; k < 3; k++)
                 {
 
                     gridMatrix[i, j, k] = new GameObject("gridProxy").AddComponent<BuildingProxy>();
                 }
             }
-
         }
-        
-
-        gridLayout = GetComponent<GridLayout>();
-        gap = gridLayout.cellGap.x;
-        
+       
     }
 
     public void SpawnBuildingAtPosition(Vector3Int position)
@@ -76,8 +72,8 @@ public class GridManager : MonoBehaviour
         newCellPos.y -= gap;
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
-       
-        goofyAssData[position.z] = buildingPlacement[3 * position.x -position.y];
+        Debug.Log(position);
+        goofyAssData[position.z] = buildingPlacement[3 * position.x - position.y];
         gridMatrix[position.z, position.x, -position.y].Select(position);
 
     }

@@ -2,7 +2,7 @@
     "name": "InputSystem_Actions",
     "maps": [
         {
-            "name": "Player",
+            "name": "Player_1",
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
@@ -756,6 +756,34 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Accept",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Standby",
+            "id": "0e1cba8b-0d7c-4139-ac14-d9def31ab127",
+            "actions": [
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "eec34843-b160-4a5b-8e09-242e1a67c400",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5333f846-6800-4b42-b55b-9a5292aaafdb",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

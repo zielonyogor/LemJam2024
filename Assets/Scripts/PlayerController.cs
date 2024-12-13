@@ -8,9 +8,11 @@ public enum State
     TargetYourself
 }
 
-public class PlayerInput : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public int id = 1;
+
+    PlayerInput playerInput;
     private Vector3Int currentIndex;
     private State currentState;
 
@@ -21,6 +23,23 @@ public class PlayerInput : MonoBehaviour
         transform.position = newPosition;
 
         currentState = State.Basic;
+
+        playerInput = GetComponent<PlayerInput>();
+
+        timer.Timeout.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Standby");
+        });
+        MenuPause.PauseOn.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Standby");
+        });
+        MenuPause.PauseOff.AddListener(() =>
+        {
+            playerInput.SwitchCurrentActionMap("Player_" + (id + 1));
+        });
+
+        GetComponent<Animator>().SetInteger("id", id);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext context)
