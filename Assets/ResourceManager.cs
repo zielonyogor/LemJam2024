@@ -36,7 +36,7 @@ public class ResourceManager : MonoBehaviour
        
         happiness[entry.player] += entry.happiness_gain;
         gold[entry.player] += entry.gold_gain;
-        CountChange.Invoke(new CounterValues(gold[entry.player],happiness[entry.player],entry.player,entry.happiness_gain));
+        CountChange.Invoke(new CounterValues(gold[entry.player],happiness[entry.player],entry.player));
     }
 
     public void SubtractResources(HistoryEntry entry)
@@ -44,7 +44,7 @@ public class ResourceManager : MonoBehaviour
         
         happiness[entry.player] -= entry.happiness_gain;
         gold[entry.player] -= entry.gold_gain;
-        CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player,entry.happiness_gain));
+        CountChange.Invoke(new CounterValues(gold[entry.player], happiness[entry.player], entry.player));
     }
 
     public int GetPlayerWin()
