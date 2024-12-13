@@ -94,4 +94,6 @@ MonoBehaviour:
   happinessGain: -1
   happinesCostOnBuild: 0
   goldCostOnBuild: 0
+  description: I can drop bombs on enemy.
+  nameText: Bomb Factory
   owner: 0

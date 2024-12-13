@@ -10,10 +10,10 @@ using Unity.VisualScripting;
 [System.Serializable]
 public class Building : MonoBehaviour
 {
-    [SerializeField] private int moneyGain = 1;
-    [SerializeField] private int happinessGain = 1;
-    [SerializeField] private int happinesCostOnBuild = 50;
-    [SerializeField] private int goldCostOnBuild = 701;
+    public int moneyGain = 1;
+    public int happinessGain = 1;
+    public int happinesCostOnBuild = 50;
+    public int goldCostOnBuild = 701;
 
     [SerializeField] private String description = "";
     [SerializeField] private String nameText = "";
@@ -68,11 +68,21 @@ public class Building : MonoBehaviour
     public virtual void Select(Vector3Int position)
     {
         Debug.Log("co do sigmy");
+
+    }
+    public virtual void Cancel(Vector3Int position)
+    {
+        Debug.Log("co do niesigmy");
     }
 
-    public virtual String GetDescription()
+    public String GetDescription()
     {
         return description;
+    }
+
+    public String GetName()
+    {
+        return nameText;
     }
 }
 

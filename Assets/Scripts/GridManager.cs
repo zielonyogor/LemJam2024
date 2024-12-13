@@ -77,6 +77,14 @@ public class GridManager : MonoBehaviour
 
     }
 
+    public void CancelBuilding(Vector3Int position, uint id)
+    {
+        //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
+        //gridMatrix[position.z, position.x, position.y] = newBuilding;
+        gridMatrix[position.z, position.x, -position.y].Cancel(position);
+
+    }
+
     public void SendTerroristAttack(Vector3Int position)
     {
         Debug.Log(position);

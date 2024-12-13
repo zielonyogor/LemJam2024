@@ -53,8 +53,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      propertyPath: nameText
+      value: Tax Office
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: moneyGain
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      propertyPath: description
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
       propertyPath: happinessGain

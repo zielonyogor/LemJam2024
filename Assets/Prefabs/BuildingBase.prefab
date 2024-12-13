@@ -49,6 +49,8 @@ MonoBehaviour:
   happinessGain: 1
   happinesCostOnBuild: 0
   goldCostOnBuild: 20
+  description: 
+  nameText: Building
   owner: 0
 --- !u!1 &3799426083064799710
 GameObject:

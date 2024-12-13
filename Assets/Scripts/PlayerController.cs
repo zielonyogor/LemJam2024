@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         currentIndex = new Vector3Int(0, 0, id);
         Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
+        OnPlayerPositionChanged.Invoke(currentIndex);
 
         currentState = State.Basic;
 
@@ -63,7 +64,10 @@ public class PlayerController : MonoBehaviour
         Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
         transform.position = newPosition;
 
-        OnPlayerPositionChanged.Invoke(currentIndex);
+        if (currentState != State.TargetOpponent)
+        {
+            OnPlayerPositionChanged.Invoke(currentIndex);
+        }
 
         // if (id == 1)
         // {
@@ -91,12 +95,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnCancel(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
+        //if (!context.performed) return;
 
+        Debug.Log("cancel was clicked");
         if (currentState == State.TargetOpponent)
         {
+            Debug.Log("We are in targeting opps");
             currentIndex.z = id;
         }
+        // else
+        // {
+        //     GridManager.Instance.CancelBuilding(currentIndex, (uint)id);
+        // }
     }
 
     public void ChangeState(State newState)
