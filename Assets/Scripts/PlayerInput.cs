@@ -11,7 +11,6 @@ public enum State
 public class PlayerInput : MonoBehaviour
 {
     public int id = 1;
-
     private Vector3Int currentIndex;
     private State currentState;
 
@@ -55,7 +54,11 @@ public class PlayerInput : MonoBehaviour
     public void OnAccept(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
+
+        if (currentState == State.Basic)
+        {
+            GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id));
+        }
     }
 
     public void ChangeState(State newState)
@@ -64,6 +67,10 @@ public class PlayerInput : MonoBehaviour
         if (newState == State.TargetOpponent)
         {
             currentIndex.z = id == 1 ? 2 : 1;
+        }
+        else
+        {
+            currentIndex.z = id == 1 ? 1 : 2;
         }
     }
 }
