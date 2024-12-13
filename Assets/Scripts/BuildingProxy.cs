@@ -61,13 +61,12 @@ public class BuildingProxy : Building
         }
     }
 
-    public override void Cancel(Vector3Int position)
+    public override void Cancel(Vector3Int position, int id)
     {
-        if (building != null)
+        Tool stupidTool = GridManager.Instance.goofyAssTools[id];
+        if (stupidTool != null)
         {
-            building.Cancel(position);
-            Debug.Log("s[pooku scary skiabisfi]");
-
+            GridManager.Instance.goofyAssTools[id] = null;
         }
     }
 }

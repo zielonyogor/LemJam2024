@@ -75,7 +75,7 @@ public class Building : MonoBehaviour
         Debug.Log("co do sigmy");
 
     }
-    public virtual void Cancel(Vector3Int position)
+    public virtual void Cancel(Vector3Int position, int id)
     {
         Debug.Log("co do niesigmy");
     }

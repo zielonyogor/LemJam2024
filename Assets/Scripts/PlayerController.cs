@@ -85,11 +85,11 @@ public class PlayerController : MonoBehaviour
 
         if (currentState == State.Basic)
         {
-            GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id),(uint)id);
+            GridManager.Instance.SpawnBuildingAtPosition(new Vector3Int(currentIndex.x, currentIndex.y, id), (uint)id);
         }
         else if (currentState == State.TargetOpponent)
         {
-            GridManager.Instance.SpawnBuildingAtPosition(currentIndex,(uint)id);
+            GridManager.Instance.SpawnBuildingAtPosition(currentIndex, (uint)id);
         }
     }
 
@@ -103,10 +103,14 @@ public class PlayerController : MonoBehaviour
             Debug.Log("We are in targeting opps");
             currentIndex.z = id;
         }
-        // else
-        // {
-        //     GridManager.Instance.CancelBuilding(currentIndex, (uint)id);
-        // }
+        else
+        {
+            GridManager.Instance.CancelBuilding(currentIndex, (uint)id);
+            ChangeState(State.Basic);
+            Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
+            transform.position = newPosition;
+
+        }
     }
 
     public void ChangeState(State newState)
