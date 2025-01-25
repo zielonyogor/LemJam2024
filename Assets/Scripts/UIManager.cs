@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         PlayerController.OnPlayerPositionChanged.AddListener(OnGridInfo);
+        OnGridInfo(new Vector3Int(0, 0, 0));
+        OnGridInfo(new Vector3Int(0, 0, 1));
 
         ResourceManager.CountChange.AddListener(CounterUpdate);
         ResourceManager.CountChange.AddListener(IconUpdate);

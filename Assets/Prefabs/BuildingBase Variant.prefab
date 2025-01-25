@@ -68,8 +68,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8781466915254061284, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4427148584188535357}
   m_SourcePrefab: {fileID: 100100000, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+--- !u!1 &1321368703810942794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1443828841660101789, guid: 61cf4a5bff1301540a49dcfa02825341, type: 3}
+  m_PrefabInstance: {fileID: 459353397836186583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4427148584188535357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321368703810942794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608e58fb135050444adc024102477a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyGain: 2
+  happinessGain: 1
+  happinesCostOnBuild: 1
+  goldCostOnBuild: 40
+  description: Can trade gold for happiness.
+  nameText: Shop
+  owner: 0
+  goldGainPerSelect: -2
+  happinesGainPerSelect: 2
