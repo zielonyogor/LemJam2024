@@ -83,6 +83,7 @@ public class GridManager : MonoBehaviour
     {
         //Building newBuilding = Instantiate(buildingPrefab, newCellPos, Quaternion.identity);
         //gridMatrix[position.z, position.x, position.y] = newBuilding;
+        Debug.Log($"Type of builkding here {position.z} {position.x} {-position.y} {gridMatrix[position.z, position.x, -position.y].name}");
         gridMatrix[position.z, position.x, -position.y].Cancel(position, (int)id);
 
     }

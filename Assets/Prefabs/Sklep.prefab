@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyGain: 2
-  happinessGain: 1
+  happinessGain: 2
   happinesCostOnBuild: 1
   goldCostOnBuild: 40
   description: Can trade gold for happiness.

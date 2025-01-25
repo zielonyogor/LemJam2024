@@ -73,6 +73,7 @@ public class BuildingProxy : Building
         {
             GridManager.Instance.goofyAssTools[id] = null;
         }
+        building.Cancel(position, id);
         MusicManager.Instance.PlayDeclineSound();
     }
 }

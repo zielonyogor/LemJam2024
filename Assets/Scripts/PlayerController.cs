@@ -100,16 +100,15 @@ public class PlayerController : MonoBehaviour
         Debug.Log("cancel was clicked");
         if (currentState == State.TargetOpponent)
         {
-            Debug.Log("We are in targeting opps");
+            Debug.Log("We are NOT in targeting opps");
             currentIndex.z = id;
+            ChangeState(State.Basic);
+            Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
+            transform.position = newPosition;
         }
         else
         {
             GridManager.Instance.CancelBuilding(currentIndex, (uint)id);
-            ChangeState(State.Basic);
-            Vector2 newPosition = GridManager.Instance.GetGridPosition(currentIndex);
-            transform.position = newPosition;
-
         }
     }
 
